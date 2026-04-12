@@ -2,23 +2,55 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Site</title>
-   <style>
-    body {
-      background-color: #f5efe6; 
-      font-family: sans-serif;
-      margin: 0;
-      padding: 40px;
+
+  <style>
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
     }
 
-    h1 {
-      color: #333;
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* スマホ用（幅600px以下） */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
     }
   </style>
 
 </head>
 <body>
-  <img src="images/logo.png" alt="logo" style="width:150px;">
-  <h1>Hello World</h1>
-</body> 
+  <header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="logo" style="width:150px;">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+
+  <!-- ここからページの内容 -->
+  </body>
 </html>
