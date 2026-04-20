@@ -132,10 +132,18 @@ h2 {
 }
 .full-width {
   width: 100%;
-  max-width: 600px; /* PCでの最大サイズ */
+  max-width: 600px;
   margin: 0 auto;
   display: block;
 }
+
+/* スマホのときは max-width を解除 */
+@media (max-width: 768px) {
+  .full-width {
+    max-width: 100%;
+  }
+}
+
 
 
   </style>
