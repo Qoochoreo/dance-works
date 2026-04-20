@@ -8,28 +8,21 @@
       background-color: #e9e1f2;
       font-family: sans-serif;
       margin: 0;
-      padding: 0px;
+      padding: 0;
     }
-
-    h1 {
-  color: #333;
-    }
-nav a {
-    color: #6b5e55; 
-    text-decoration: underline;
-    font-weight: 500;
-    padding: 5px 8px;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
+    }
+
+    nav a {
+      color: #6b5e55;
+      text-decoration: underline;
+      font-weight: 500;
+      padding: 5px 8px;
     }
 
     nav ul {
@@ -45,6 +38,7 @@ nav a {
       header {
         flex-direction: column;
         gap: 15px;
+        padding: 10px; /* ← スマホで余白が邪魔しないように調整 */
       }
 
       nav ul {
@@ -53,147 +47,73 @@ nav a {
         text-align: center;
       }
     }
-  .b {
-    font-weight: bold;
-  }
-  .center {
-  width: 100%;
-  text-align: center;
-}
 
-h1 {
-  font-size: 32px;
-  color: #6b5e55; /* 柔らかいブラウン */
-  margin:30px;
-}
+    /* 画像を中央寄せするための親要素 */
+    .center {
+      width: 100%;
+      text-align: center;
+    }
 
-h2 {
-  font-size: 20px;
-  color: #6b5e55;
-  font-weight: normal; /* 太字解除（必要） */
-  line-height: 1.8; /* 読みやすくなる */
-}
-    .center a {
-  display: inline-block;
-  margin-top: 30px; /* 好きな値に調整OK */
-}
-    .insta img {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-}
-       .contact img {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-}
-    .more img {
-  width: 40%;
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
-}
+    /* 画像の基本設定（PC用） */
+    .full-width {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      display: block;
+    }
 
-  
-    .center h1 span.b {
-  font-size: 1.2em;
-}
+    /* スマホでは画面幅いっぱいに広げる */
+    @media (max-width: 600px) {
+      .full-width {
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
+      }
+    }
 
-.center h1 {
-  font-size: 1.8em;
-  line-height: 1.4;
-}
+    .footer {
+      background-color: #e9e1f2;
+      padding: 40px 0;
+      text-align: center;
+      color: #6b5a6e;
+      font-size: 14px;
+    }
 
-
-  .contact a {
-  display: block;
-}
-    .contact a[href^="mailto"] {
-  margin-top: 20px;
-  display: inline-block;
-}
-.footer {
-  background-color: #e9e1f2; /* ラベンダー系で統一 */
-  padding: 40px 0;
-  text-align: center;
-  color: #6b5a6e; /* 柔らかいブラウン系 */
-  font-size: 14px;
-}
-
-.footer .logo {
-  font-size: 16px;
-  margin-bottom: 5px;
-  letter-spacing: 1px;
-}
-
-.full-width {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  display: block;
-}
-
-/* スマホのときは max-width を解除 */
-@media (max-width: 768px) {
-  .full-width {
-    max-width: 100%;
-  }
-}@media (max-width: 600px) {
-  img.full-width {
-    width: 100vw;   /* 画面幅ぴったり */
-    max-width: 100vw;
-    margin: 0;
-  }
-}
-@media (max-width: 600px) {
-  header {
-    padding: 0;
-  }
-
-  img.full-width {
-    width: 100vw;
-    max-width: 100vw;
-    margin: 0;
-  }
-}
-
-
+    .footer .logo {
+      font-size: 16px;
+      margin-bottom: 5px;
+      letter-spacing: 1px;
+    }
   </style>
-
 </head>
+
 <body>
-  <style>
-  header {
-    margin-bottom: 5px; /* ← ここで隙間を調整 */
-  }
-</style>
 
   <header>
-  <a href="index.html">
-    <img src="images/logo.png" alt="logo" style="width:150px;">
-  </a>
+    <a href="index.html">
+      <img src="images/logo.png" alt="logo" style="width:150px;">
+    </a>
 
-  <nav>
-    <ul>
-      <li><a href="concept.html">Concept</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="concept.html">Concept</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  </style>
-  <!-- ここからページの内容 -->
-<div class="center">
-  <img src="images/preparing.png" alt="準備中" class="full-width">
-</div>
-  <footer class="footer">
-  <div class="center">
-    <p class="logo">Qoo choreo</p>
-    <p class="copy">© 2024 QOO All Rights Reserved.</p>
-  </div>
-</footer>
 
-  </body>
+  <!-- ここからページの内容 -->
+  <div class="center">
+    <img src="images/preparing.png" alt="準備中" class="full-width">
+  </div>
+
+  <footer class="footer">
+    <div class="center">
+      <p class="logo">Qoo choreo</p>
+      <p class="copy">© 2024 QOO All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
