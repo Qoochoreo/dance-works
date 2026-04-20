@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+
+  <style>
+    body {
+      background-color: #e9e1f2;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+  color: #333;
+    }
+nav a {
+    color: #6b5e55; 
+    text-decoration: underline;
+    font-weight: 500;
+    padding: 5px 8px;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* スマホ用（幅600px以下） */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  .b {
+    font-weight: bold;
+  }
+  .center {
+  text-align: center;
+}
+h1 {
+  font-size: 32px;
+  color: #6b5e55; /* 柔らかいブラウン */
+  margin:30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #6b5e55;
+  font-weight: normal; /* 太字解除（必要） */
+  line-height: 1.8; /* 読みやすくなる */
+}
+    .center a {
+  display: inline-block;
+  margin-top: 30px; /* 好きな値に調整OK */
+}
+    .insta img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+       .contact img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+    .more img {
+  width: 40%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+  
+    .center h1 span.b {
+  font-size: 1.2em;
+}
+
+.center h1 {
+  font-size: 1.8em;
+  line-height: 1.4;
+}
+
+
+  .contact a {
+  display: block;
+}
+    .contact a[href^="mailto"] {
+  margin-top: 20px;
+  display: inline-block;
+}
+.footer {
+  background-color: #e9e1f2; /* ラベンダー系で統一 */
+  padding: 40px 0;
+  text-align: center;
+  color: #6b5a6e; /* 柔らかいブラウン系 */
+  font-size: 14px;
+}
+
+.footer .logo {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+  </style>
+
+</head>
+<body>
+  <style>
+  header {
+    margin-bottom: 5px; /* ← ここで隙間を調整 */
+  }
+</style>
+
+  <header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="logo" style="width:150px;">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  </header>
+  </style>
+  <!-- ここからページの内容 -->
+
+    <img src="images/preparing.png" alt="準備中">
+ 
+  <footer class="footer">
+  <div class="center">
+    <p class="logo">Qoo choreo</p>
+    <p class="copy">© 2024 QOO All Rights Reserved.</p>
+  </div>
+</footer>
+
+  </body>
+</html>
