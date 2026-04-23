@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-color: #e9e1f2;
@@ -34,19 +34,21 @@
     }
 
     /* スマホ用（幅600px以下） */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 10px;
-      }
+@media (max-width: 600px) {
+  header {
+    flex-direction: row; /* ← 縦並びにしない */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
 
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-    }
+  nav ul {
+    flex-direction: row; /* ← 横並びに戻す */
+    gap: 20px;
+    text-align: right;
+  }
+}
+
 
     /* まず両方横幅いっぱいに */
     .img-pc img,
@@ -79,6 +81,13 @@
       margin-bottom: 5px;
       letter-spacing: 1px;
     }
+@media (max-width: 600px) {
+  .footer {
+    text-align: center !important;
+  }
+}
+
+    
   </style>
 </head>
 
