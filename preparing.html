@@ -38,7 +38,7 @@
       header {
         flex-direction: column;
         gap: 15px;
-        padding: 10px; /* ← スマホで余白が邪魔しないように調整 */
+        padding: 10px;
       }
 
       nav ul {
@@ -48,24 +48,23 @@
       }
     }
 
-  /* まず両方横幅いっぱいに */
-.img-pc img,
-.img-sp img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+    /* まず両方横幅いっぱいに */
+    .img-pc img,
+    .img-sp img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
-/* PC用画像をデフォルトで表示、スマホ用は非表示 */
-.img-pc { display: block; }
-.img-sp { display: none; }
+    /* PC用画像をデフォルトで表示、スマホ用は非表示 */
+    .img-pc { display: block; }
+    .img-sp { display: none; }
 
-/* スマホ（768px以下）では逆にする */
-@media (max-width: 768px) {
-  .img-pc { display: none; }
-  .img-sp { display: block; }
-}
-
+    /* スマホ（768px以下）では逆にする */
+    @media (max-width: 768px) {
+      .img-pc { display: none; }
+      .img-sp { display: block; }
+    }
 
     .footer {
       background-color: #e9e1f2;
@@ -101,14 +100,13 @@
 
   <!-- ここからページの内容 -->
   
- <div class="img-pc">
-  <img src="images/preparing.PC.png" alt="準備中（PC）">
-</div>
+  <div class="img-pc">
+    <img src="images/preparing.PC.png" alt="準備中（PC）">
+  </div>
 
-<div class="img-sp">
-  <img src="images/preparing.png" alt="準備中（スマホ）">
-</div>
-
+  <div class="img-sp">
+    <img src="images/preparing.png" alt="準備中（スマホ）">
+  </div>
 
   <footer class="footer">
     <div class="center">
