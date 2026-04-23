@@ -32,6 +32,16 @@
       margin: 0;
       padding: 0;
     }
+@media (max-width: 600px) {
+  nav a {
+    font-size: 12px; /* ← スマホ用に小さく */
+    padding: 4px 6px; /* ← 余白も少し小さく */
+  }
+
+  nav ul {
+    gap: 12px; /* ← 文字が大きく見えないように間隔も調整 */
+  }
+}
 
     /* スマホ用（幅600px以下） */
 @media (max-width: 600px) {
@@ -68,15 +78,14 @@
       .img-sp { display: block; }
     }
     
-@media (max-width: 900px) {
-  .img-sp {
-    text-align: center;
-  }
-
-  .img-sp img {
-    display: inline-block;
-  }
+.img-sp {
+  text-align: center;
 }
+
+.img-sp img {
+  display: inline-block;
+}
+
 
     .footer {
       background-color: #e9e1f2;
