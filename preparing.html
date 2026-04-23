@@ -48,15 +48,11 @@
       }
     }
 
-    /* 画像の基本設定（PC用） */
-    .full-width {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      display: block;
-    }
-
-  
+   .full-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
     .footer {
       background-color: #e9e1f2;
@@ -92,12 +88,21 @@
 
   <!-- ここからページの内容 -->
   
-    <img src="images/preparing.png" alt="準備中" class="full-width">
+   <picture>
+  <!-- PC用 -->
+  <source srcset="images/preparing_PC.png" media="(min-width: 769px)">
+
+  <!-- スマホ用 -->
+  <source srcset="images/preparing.png" media="(max-width: 768px)">
+
+  <!-- フォールバック -->
+  <img src="images/preparing.png.png" alt="準備中" class="full-img">
+</picture>
 
   <footer class="footer">
     <div class="center">
       <p class="logo">Qoo choreo</p>
-      <p class="copy">© 2024 QOO All Rights Reserved.</p>
+      <p class="copy">© 2026 QOO All Rights Reserved.</p>
     </div>
   </footer>
 
