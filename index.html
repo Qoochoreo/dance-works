@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -145,6 +146,16 @@ h2 {
   font-size: 16px;
   margin-bottom: 5px;
   letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  nav a {
+    font-size: 12px; /* ← スマホ用に小さく */
+    padding: 4px 6px; /* ← 余白も少し小さく */
+  }
+
+  nav ul {
+    gap: 12px; /* ← 文字が大きく見えないように間隔も調整 */
+  }
 }
 
   </style>
