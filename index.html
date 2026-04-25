@@ -167,13 +167,14 @@ h2 {
 }
 
 @media (max-width: 600px) {
-  .more img {
-    width: 28% !important;   /* ← 強制的に小さくする */
-    max-width: 140px !important;
-    margin: 0 auto !important; /* ← 中央寄せを強制 */
+  img[src="images/more.png"] {
+    width: 45% !important;   /* ← ここを調整ポイントにする */
+    max-width: 220px !important;
+    margin: 20px auto !important;
     display: block;
   }
 }
+
     
 .footer {
   background-color: #e9e1f2; /* ラベンダー系で統一 */
