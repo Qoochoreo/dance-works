@@ -96,6 +96,13 @@ h2 {
   margin: 0 auto;
   display: block;
 }
+@media (max-width: 600px) {
+  .more img {
+    width: 30%;   /* ← 今40% → 30%にダウン */
+    max-width: 150px;
+  }
+}
+    
   .Concept{
     margin-top:80px;
       margin-bottom:80px;
@@ -146,6 +153,25 @@ h2 {
   margin-top: 20px;
   display: inline-block;
 }
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px; /* ← 今より少し小さく */
+  }
+
+  h2 {
+    font-size: 16px; /* ← 読みやすいスマホサイズ */
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
 .footer {
   background-color: #e9e1f2; /* ラベンダー系で統一 */
   padding: 40px 0;
