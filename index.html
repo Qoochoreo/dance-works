@@ -41,19 +41,21 @@ nav a {
       padding: 0;
     }
 
-    /* スマホ用（幅600px以下） */
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 15px;
-      }
+  @media (max-width: 600px) {
+  header {
+    flex-direction: row; /* ← 縦並びにしない */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
 
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-      }
-    }
+  nav ul {
+    flex-direction: row; /* ← 横並びに戻す */
+    gap: 20px;
+    text-align: right;
+  }
+}
+
   .b {
     font-weight: bold;
   }
