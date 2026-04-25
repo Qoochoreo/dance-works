@@ -96,12 +96,6 @@ h2 {
   margin: 0 auto;
   display: block;
 }
-@media (max-width: 600px) {
-  .more img {
-    width: 30%;   /* ← 今40% → 30%にダウン */
-    max-width: 150px;
-  }
-}
     
   .Concept{
     margin-top:80px;
@@ -172,6 +166,15 @@ h2 {
   }
 }
 
+@media (max-width: 600px) {
+  .more img {
+    width: 28% !important;   /* ← 強制的に小さくする */
+    max-width: 140px !important;
+    margin: 0 auto !important; /* ← 中央寄せを強制 */
+    display: block;
+  }
+}
+    
 .footer {
   background-color: #e9e1f2; /* ラベンダー系で統一 */
   padding: 40px 0;
