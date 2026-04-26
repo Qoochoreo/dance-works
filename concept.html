@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+/* ------------------------------
+   基本設定
+------------------------------ */
+body {
+  background-color: #e9e1f2;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #6b5e55;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #6b5e55;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.center {
+  text-align: center;
+}
+
+.b {
+  font-weight: bold;
+}
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #6b5e55;
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 5px 8px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホヘッダー */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+}
+
+
+/* ------------------------------
+   セクション
+------------------------------ */
+.Concept,
+.greeting {
+  margin: 80px 0;
+}
+
+.center a {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #d7c7e8; /* もっと淡いラベンダー */
+  color: #6b5e55; /* 柔らかいブラウン文字 */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* ふわっと影 */
+}
+
+
+/* ------------------------------
+   スマホ文字サイズ
+------------------------------ */
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 16px; }
+  h3 { font-size: 14px; }
+  p  { font-size: 14px; line-height: 1.7; }
+}
+
+
+  
+/* ------------------------------
+   フッター
+------------------------------ */
+.footer {
+  background-color: #e9e1f2;
+  padding: 40px 0;
+  text-align: center;
+  color: #6b5a6e;
+  font-size: 14px;
+}
+
+.footer .logo {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="logo" style="width:150px;">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+<!-- Concept -->
+<section class="Concept">
+  <div class="center">
+    <h1><span class="b">◆コンセプト◆</span><br>Concept</h1>
+    <h2><span class="b">大人から始めるダンスを、もっと身近に。</span></h2>
+    <h2><span class="b">感情を解き放ち、音に浸り、自由に表現するJAZZダンス。</span><br>
+    JAZZダンスは「ジャズミュージックで踊るダンス？」とよく聞かれますが、<br>
+      <span class="b">答えはNO。</span>
+現在のJAZZダンスは、洋楽・邦楽問わずさまざまな音楽で踊り、<br>
+バレエの基礎を取り入れたしなやかな動きと、スタイルによって変化する豊かな表現力が魅力です。<br>
+大人になると、思い切り泣いたり笑ったり、感情を表に出す機会が少なくなりがち。<br>
+だからこそ、好きな音楽に身をゆだね、心のままに表現できる時間は、<br>
+忙しい大人にとって“こころのやすらぎ”になると考えています。<br>
+<span class="b">JAZZダンスを通して、心が躍る瞬間を一緒に。</span><br>
+大人から始める方にも寄り添い、安心して楽しめるレッスンを提供します。<br>
+</h2>
+
+  <a href="index.html" class="btn">TOPへ戻る</a>
+
+  </div>
+</section>
+
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="center">
+    <p class="logo">Qoo choreo</p>
+    <p class="copy">© 2026 QOO All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
