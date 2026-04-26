@@ -4,183 +4,185 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      background-color: #e9e1f2;
-      font-family: sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
-  color: #333;
-    }
-nav a {
-    color: #6b5e55; 
-    text-decoration: underline;
-    font-weight: 500;
-    padding: 5px 8px;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-  @media (max-width: 600px) {
-  header {
-    flex-direction: row; /* ← 縦並びにしない */
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-
-  nav ul {
-    flex-direction: row; /* ← 横並びに戻す */
-    gap: 20px;
-    text-align: right;
-  }
+<style>
+/* ------------------------------
+   基本設定
+------------------------------ */
+body {
+  background-color: #e9e1f2;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-  .b {
-    font-weight: bold;
-  }
-  .center {
-  text-align: center;
-}
 h1 {
   font-size: 32px;
-  color: #6b5e55; /* 柔らかいブラウン */
-  margin:30px;
+  color: #6b5e55;
+  margin: 30px;
 }
 
 h2 {
   font-size: 20px;
   color: #6b5e55;
-  font-weight: normal; /* 太字解除（必要） */
-  line-height: 1.8; /* 読みやすくなる */
+  font-weight: normal;
+  line-height: 1.8;
 }
-    .center a {
-  display: inline-block;
-  margin-top: 30px; /* 好きな値に調整OK */
+
+.center {
+  text-align: center;
 }
-    .insta img {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
+
+.b {
+  font-weight: bold;
 }
-       .contact img {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px;
 }
-    .more img {
-  width: 40%;
+
+nav a {
+  color: #6b5e55;
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 5px 8px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホヘッダー */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+}
+
+/* ------------------------------
+   MOREバナー（PC用）
+------------------------------ */
+.more img {
+  width: 200px;
   max-width: 200px;
-  margin: 0 auto;
+  margin: 30px auto;
   display: block;
 }
-    
-  .Concept{
-    margin-top:80px;
-      margin-bottom:80px;
-}
-  
-    .center h1 span.b {
-  font-size: 1.2em;
-}
 
-.center h1 {
-  font-size: 1.8em;
-  line-height: 1.4;
-}
-.insta {
-  background-color: #e9e1f2;     /* ラベンダー */
-  background-image: url("images/back01.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 0; /* ←ここに入れるのが正解 */
-}
-.greeting {
-   margin-top:80px;
-    margin-bottom:80px;
-}
-
-    @media (max-width: 767px) {
-  .insta,
-  .contact {
-    background-size: cover;   /* 横幅いっぱい */
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-    .contact {
-  background-color: #e9e1f2;     /* ラベンダー */
-  background-image: url("images/back03.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 80px 0; /* ←ここに入れるのが正解 */
-}
-  .contact a {
-  display: block;
-}
-    .contact a[href^="mailto"] {
-  margin-top: 20px;
-  display: inline-block;
-}
+/* スマホ MOREバナー */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 26px; /* ← 今より少し小さく */
-  }
-
-  h2 {
-    font-size: 16px; /* ← 読みやすいスマホサイズ */
-  }
-
-  h3 {
-    font-size: 14px;
-  }
-
-  p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
-
-@media (max-width: 600px) {
-  img[src="images/more.png"] {
-    width: 60% !important;   /* ← ここを調整ポイントにする */
+  .more img {
+    width: 60% !important;
     max-width: 300px !important;
     margin: 20px auto !important;
-    display: block;
   }
 }
 
-    
+/* ------------------------------
+   セクション
+------------------------------ */
+.Concept,
+.greeting {
+  margin: 80px 0;
+}
+
+.center a {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+/* Instagram & Contact バナー画像 */
+.insta img,
+.contact img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* 背景画像（スマホ対応） */
+.insta,
+.contact {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+
+.insta {
+  background-image: url("images/back01.png");
+}
+
+.contact {
+  background-image: url("images/back03.png");
+}
+
+/* ------------------------------
+   スマホ文字サイズ
+------------------------------ */
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 16px; }
+  h3 { font-size: 14px; }
+  p  { font-size: 14px; line-height: 1.7; }
+}
+
+/* ------------------------------
+   動画（MV）
+------------------------------ */
+.mv-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* PC動画 */
+@media (min-width: 768px) {
+  .mv-wrap {
+    height: 750px;
+  }
+  .mv-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* スマホ動画 */
+@media (max-width: 767px) {
+  .mv-wrap video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #000;
+  }
+}
+
+/* ------------------------------
+   フッター
+------------------------------ */
 .footer {
-  background-color: #e9e1f2; /* ラベンダー系で統一 */
+  background-color: #e9e1f2;
   padding: 40px 0;
   text-align: center;
-  color: #6b5a6e; /* 柔らかいブラウン系 */
+  color: #6b5a6e;
   font-size: 14px;
 }
 
@@ -189,28 +191,12 @@ h2 {
   margin-bottom: 5px;
   letter-spacing: 1px;
 }
-@media (max-width: 600px) {
-  nav a {
-    font-size: 12px; /* ← スマホ用に小さく */
-    padding: 4px 6px; /* ← 余白も少し小さく */
-  }
-
-  nav ul {
-    gap: 12px; /* ← 文字が大きく見えないように間隔も調整 */
-  }
-}
-
-  </style>
-
-</head>
-<body>
-  <style>
-  header {
-    margin-bottom: 5px; /* ← ここで隙間を調整 */
-  }
 </style>
+</head>
 
-  <header>
+<body>
+
+<header>
   <a href="index.html">
     <img src="images/logo.png" alt="logo" style="width:150px;">
   </a>
@@ -222,111 +208,83 @@ h2 {
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-  </header>
-  <!-- ここからページの内容 -->
-<style>
-  /* ▼ PC・スマホ共通：動画の基本設定 */
-.mv-wrap {
-  width: 100%;
-  overflow: hidden;
-}
+</header>
 
-/* ▼ PC動画：もう一回り大きく表示 */
-@media (min-width: 768px) {
-  .mv-wrap {
-    height: 750px; /* ← PCで大きく見せる高さ（調整OK） */
-  }
-
-  .mv-wrap video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* 画面いっぱいに */
-    object-position: center;
-  }
-}
-
-/* ▼ スマホ動画：縦長に切れず“全部表示” */
-@media (max-width: 767px) {
-  .mv-wrap {
-    height: auto; /* 高さ固定を解除 */
-  }
-
-  .mv-wrap video {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* ← 全部表示にする */
-    object-position: center;
-    background-color: #000; /* 黒背景で見やすく（任意） */
-  }
-}
-
-</style>
-
+<!-- MV -->
 <div class="mv-wrap">
   <video autoplay muted loop playsinline>
     <source src="images/mainvisual.mp4" type="video/mp4">
   </video>
 </div>
-   <section class="Concept">
+
+<!-- Concept -->
+<section class="Concept">
   <div class="center">
-  <h1><span class="b">◆コンセプト◆</span><br>Concept</h1>
-  <h2><span class="b">大人から始めるダンスを、もっと身近に。</span></h2>
-  <h2><span class="b">感情を解き放ち、音に浸り、自由に表現するJAZZダンス。</span><br>
-JAZZダンスは「ジャズミュージックで踊るダンス？」とよく聞かれますが・・・</h2>
+    <h1><span class="b">◆コンセプト◆</span><br>Concept</h1>
+    <h2><span class="b">大人から始めるダンスを、もっと身近に。</span></h2>
+    <h2><span class="b">感情を解き放ち、音に浸り、自由に表現するJAZZダンス。</span><br>
+    JAZZダンスは「ジャズミュージックで踊るダンス？」とよく聞かれますが・・・</h2>
 
     <a href="concept.html" class="more">
-    <img src="images/more.png" alt="コンセプト">
-  </a>
-</div>
-   </section>
- <section class="insta">
-<div class="center">
-  <h1><span class="b">◆コレオ◆</span><br>choreo</h1>
-  <h2>3週間で1つの振り付けが完成するまでの過程を更新していきます。</h2>
-</div>
-   
+      <img src="images/more.png" alt="コンセプト">
+    </a>
+  </div>
+</section>
+
+<!-- Insta -->
+<section class="insta">
+  <div class="center">
+    <h1><span class="b">◆コレオ◆</span><br>choreo</h1>
+    <h2>3週間で1つの振り付けが完成するまでの過程を更新していきます。</h2>
+  </div>
+
   <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
     <img src="images/insta-banner.png" alt="Instagramへ">
   </a>
+</section>
 
-  <!-- 投稿ができたらここにサムネを追加 -->
-  <!-- 例：
-  <div class="insta-thumbs">
-    <img src="images/thumb1.jpg" alt="">
-    <img src="images/thumb2.jpg" alt="">
-    <img src="images/thumb3.jpg" alt="">
-</div>
-  -->
-   </section>
-  
-   <section class="greeting">
+<!-- Greeting -->
+<section class="greeting">
   <div class="center">
     <h1><span class="b">◆ご挨拶◆</span><br> greeting </h1>
     <h2>はじめまして。<br>
-JAZZ dancer のQooと申します。<br>
-このページをご覧いただきありがとうございます。<br>
-私がJAZZダンスに出会ったのは20代。・・・</h2>
-    <a href="about.html" class="more"><img src="images/more.png" alt="Aboutページへ"></a>
+    JAZZ dancer のQooと申します。<br>
+    このページをご覧いただきありがとうございます。<br>
+    私がJAZZダンスに出会ったのは20代。・・・</h2>
+
+    <a href="about.html" class="more">
+      <img src="images/more.png" alt="Aboutページへ">
+    </a>
+  </div>
 </section>
- <section class="contact">
+
+<!-- Contact -->
+<section class="contact">
   <div class="center">
     <h1><span class="b">◆お問合せ◆</span><br> Contact </h1>
     <h2>振付・レッスンのご依頼・ご相談はこちら</h2>
+
     <h3>DMからお気軽にお問い合わせください▼</h3>
-      <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
-    <img src="images/insta-banner.png" alt="Instagramへ"></a>
-        <h3>LINE公式アカウントはこちら▼</h3>
-        <a href="preparing.html">
-    <img src="images/LINE-banner.png" alt="LINEへ"></a>
-  <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
+    <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
+      <img src="images/insta-banner.png" alt="Instagramへ">
+    </a>
+
+    <h3>LINE公式アカウントはこちら▼</h3>
+    <a href="preparing.html">
+      <img src="images/LINE-banner.png" alt="LINEへ">
+    </a>
+
+    <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
   </div>
-</section>  
-  <footer class="footer">
+</section>
+
+<!-- Footer -->
+<footer class="footer">
   <div class="center">
     <p class="logo">Qoo choreo</p>
     <p class="copy">© 2026 QOO All Rights Reserved.</p>
   </div>
 </footer>
 
-  </body>
+</body>
 </html>
