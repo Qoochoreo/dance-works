@@ -119,6 +119,28 @@ nav ul {
   letter-spacing: 1px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* ふわっと影 */
 }
+/* 共通設定 */
+.concept-visual {
+  width: 100%;
+  height: 200px; /* 好きに調整OK */
+  background-size: cover;
+  background-position: center;
+}
+
+/* 上：濃い星空 */
+.top-visual {
+  background-image: url("images/star-strong.png"); /* 濃い方の画像 */
+  opacity: 0.45; /* 少し濃いめ */
+  margin-bottom: 40px;
+}
+
+/* 下：薄い星空 */
+.bottom-visual {
+  background-image: url("images/star-soft.png"); /* 薄い方の画像 */
+  opacity: 0.25; /* ふわっと薄め */
+  margin-top: 40px;
+}
+
 
 
 /* ------------------------------
@@ -169,6 +191,8 @@ nav ul {
 </header>
 
 
+<!-- ヘッダーのすぐ下：濃い星空 -->
+<div class="concept-visual top-visual"></div>
 
 <!-- Concept -->
 <section class="Concept">
@@ -195,8 +219,9 @@ nav ul {
   </div>
 </section>
 
-
-</section>
+<!-- フッターの直前：薄い星空 -->
+<div class="concept-visual bottom-visual"></div>
+  
 
 <!-- Footer -->
 <footer class="footer">
