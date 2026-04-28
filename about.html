@@ -152,7 +152,13 @@ nav ul {
     background-size: 100% 80px, 100% 80px;
     padding: 100px 20px; /* 上下に星空の高さ分余白 */
   }
-
+.star-wrap {
+  background-image: url("star-top.jpg"), url("star-bottom.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center, bottom center;
+  background-size: 100% 80px, 100% 80px;
+  padding: 100px 0; /* 上下の星空分の余白 */
+}
   /* 活動歴はPCと同じ背景でOK */
   .career-bg {
     padding: 40px 0;
@@ -175,7 +181,17 @@ nav ul {
 
 
 
-
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #d7c7e8; /* もっと淡いラベンダー */
+  color: #6b5e55; /* 柔らかいブラウン文字 */
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* ふわっと影 */
+}
 
 
 /* ------------------------------
@@ -227,22 +243,22 @@ nav ul {
 <section class="profile-section pc-layout">
   <div class="profile-bg">
     <div class="profile-inner">
+      <div class="star-wrap">
       <div class="profile-text">
         <h2>◆ プロフィール（Profile）</h2>
-        <p>ダンサーネーム：Qoo
-ジャンル： JAZZ
-子どもの頃は音楽教室のミュージカルクラスに通い、
-学生時代は服飾科でデザインを学び、ファッションショーのステージに立つなど、
-振り返れば“表現すること”がずっと好きでした。
-大人になってからもダンスへの憧れは消えず、
-仕事に追われる日々の中で「楽しめる趣味がほしい」と思い、
-さまざまなジャンルの体験レッスンに参加。
-その中で、感情表現を大切にするJAZZダンスに強く惹かれ、本格的に学び始めました。
-しなやかさと力強さ、自由な表現が共存するJAZZダンス。
-その魅力を、自分らしく、そして大人から始める方にも寄り添いながら伝えていきます。
-</p>
+        <p>ダンサーネーム：Qoo</p>
+ <p>ジャンル： JAZZ</p>
+ <p>子どもの頃は音楽教室のミュージカルクラスに通い、<br>
+学生時代は服飾科でデザインを学び、ファッションショーのステージに立つなど、<br>
+振り返れば“表現すること”がずっと好きでした。<br>
+大人になってからもダンスへの憧れは消えず、<br>
+仕事に追われる日々の中で「楽しめる趣味がほしい」と思い、<br>
+さまざまなジャンルの体験レッスンに参加。<br>
+その中で、感情表現を大切にするJAZZダンスに強く惹かれ、本格的に学び始めました。<br>
+しなやかさと力強さ、自由な表現が共存するJAZZダンス。<br>
+その魅力を、自分らしく、そして大人から始める方にも寄り添いながら伝えていきます。</p>
       </div>
-
+     </div>
       <div class="profile-photo">
         <img src="images/prof.JPG" alt="プロフィール写真">
       </div>
