@@ -104,7 +104,9 @@ nav ul {
 .profile-photo img {
   width: 300px;
   border-radius: 12px;
+  margin-left: 40px; /* 右寄りに見せるための余白 */
 }
+
 
 /* 活動歴の背景 */
 .career-bg {
@@ -154,6 +156,20 @@ nav ul {
   /* 活動歴はPCと同じ背景でOK */
   .career-bg {
     padding: 40px 0;
+  }
+}
+@media (max-width: 600px) {
+  .profile-inner {
+    display: flex;
+    flex-direction: column; /* 縦並びに */
+  }
+
+  .profile-photo {
+    order: 1; /* 写真を先頭に */
+  }
+
+  .profile-text {
+    order: 2; /* 文章を後ろに */
   }
 }
 
