@@ -76,74 +76,91 @@ nav ul {
   }
 }
 
-/* ------------------------------
-   MOREバナー（PC用）
------------------------------- */
-.more img {
-  width: 260px;
-  max-width: 260px;
-  margin: 30px auto;
-  display: block;
-}
 
-/* スマホ MOREバナー */
-@media (max-width: 600px) {
-  .more img {
-    width: 60% !important;
-    max-width: 300px !important;
-    margin: 20px auto !important;
-  }
-}
 
 /* ------------------------------
    セクション
 ------------------------------ */
-.Concept,
-.greeting {
-  margin: 80px 0;
-}
-
-.center a {
-  display: inline-block;
-  margin-top: 30px;
-}
-
-  .contact a img {
-  margin: 20px auto;
-  display: block;
-}
-
- .contact a {
-  display: block;
-  text-align: center;
-}
- 
-
-/* Instagram & Contact バナー画像 */
-.insta img,
-.contact img {
-  width: 80%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-}
-
-/* 背景画像（スマホ対応） */
-.insta,
-.contact {
+/* PCデフォルト（横並び） */
+.profile-bg {
+  background-image: url("images/back02.png"); /* PC用背景 */
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   padding: 80px 0;
 }
 
-.insta {
-  background-image: url("images/back01.png");
+.profile-inner {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
-.contact {
-  background-image: url("images/back03.png");
+.profile-text {
+  width: 50%;
 }
+
+.profile-photo img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* 活動歴の背景 */
+.career-bg {
+  background-image: url("images/BACK04.png");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  margin-top: 40px;
+}
+
+.career-bg ul {
+  width: 80%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+@media (max-width: 600px) {
+
+  /* PCの横並びを解除して縦並びに */
+  .profile-inner {
+    display: block;
+    text-align: center;
+  }
+
+  /* スマホは背景画像を外す or 薄くする */
+  .profile-bg {
+    background-image: none; /* 必要なら薄い星空に変更してもOK */
+    padding: 40px 0;
+  }
+
+  /* 写真を先頭に */
+  .profile-photo img {
+    width: 70%;
+    margin: 0 auto 20px;
+    display: block;
+  }
+
+  /* 星空でサンドイッチする文章 */
+  .profile-text {
+    background-image: url("images/star-strong.png"), url("images/star-soft.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 80px, 100% 80px;
+    padding: 100px 20px; /* 上下に星空の高さ分余白 */
+  }
+
+  /* 活動歴はPCと同じ背景でOK */
+  .career-bg {
+    padding: 40px 0;
+  }
+}
+
+
+
+
+
 
 /* ------------------------------
    スマホ文字サイズ
@@ -153,37 +170,6 @@ nav ul {
   h2 { font-size: 16px; }
   h3 { font-size: 14px; }
   p  { font-size: 14px; line-height: 1.7; }
-}
-
-/* ------------------------------
-   動画（MV）
------------------------------- */
-.mv-wrap {
-  width: 100%;
-  overflow: hidden;
-}
-
-/* PC動画 */
-@media (min-width: 768px) {
-  .mv-wrap {
-    height: 750px;
-  }
-  .mv-wrap video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-}
-
-/* スマホ動画 */
-@media (max-width: 767px) {
-  .mv-wrap video {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    background-color: #000;
-  }
 }
 
 /* ------------------------------
@@ -220,74 +206,45 @@ nav ul {
     </ul>
   </nav>
 </header>
+  
+<!-- profile -->
+<section class="profile-section pc-layout">
+  <div class="profile-bg">
+    <div class="profile-inner">
+      <div class="profile-text">
+        <h2>◆ プロフィール（Profile）</h2>
+        <p>ダンサーネーム：Qoo
+ジャンル： JAZZ
+子どもの頃は音楽教室のミュージカルクラスに通い、
+学生時代は服飾科でデザインを学び、ファッションショーのステージに立つなど、
+振り返れば“表現すること”がずっと好きでした。
+大人になってからもダンスへの憧れは消えず、
+仕事に追われる日々の中で「楽しめる趣味がほしい」と思い、
+さまざまなジャンルの体験レッスンに参加。
+その中で、感情表現を大切にするJAZZダンスに強く惹かれ、本格的に学び始めました。
+しなやかさと力強さ、自由な表現が共存するJAZZダンス。
+その魅力を、自分らしく、そして大人から始める方にも寄り添いながら伝えていきます。
+</p>
+      </div>
 
-<!-- MV -->
-<div class="mv-wrap">
-  <video autoplay muted loop playsinline>
-    <source src="images/mainvisual.mp4" type="video/mp4">
-  </video>
-</div>
+      <div class="profile-photo">
+        <img src="images/prof.JPG" alt="プロフィール写真">
+      </div>
+    </div>
+  </div>
 
-<!-- Concept -->
-<section class="Concept">
-  <div class="center">
-    <h1><span class="b">◆コンセプト◆</span><br>Concept</h1>
-    <h2><span class="b">大人から始めるダンスを、もっと身近に。</span></h2>
-    <h2><span class="b">感情を解き放ち、音に浸り、自由に表現するJAZZダンス。</span><br>
-    JAZZダンスは「ジャズミュージックで踊るダンス？」とよく聞かれますが・・・</h2>
-
-    <a href="concept.html" class="more">
-      <img src="images/more.png" alt="コンセプト">
-    </a>
+  <div class="career-bg">
+    <h3>活動歴</h3>
+    <ul>
+      <li>2020年〜 ダンス開始</li>
+      <li>2023年〜 JAZZダンス継続</li>
+      <li>その他の活動歴…</li>
+    </ul>
   </div>
 </section>
 
-<!-- Insta -->
-<section class="insta">
-  <div class="center">
-    <h1><span class="b">◆コレオ◆</span><br>choreo</h1>
-    <h2>3週間で1つの振り付けが完成するまでの過程を更新していきます。</h2>
-  </div>
+  <a href="index.html" class="btn">TOPへ戻る</a>
 
-  <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
-    <img src="images/insta-banner.png" alt="Instagramへ">
-  </a>
-</section>
-
-<!-- Greeting -->
-<section class="greeting">
-  <div class="center">
-    <h1><span class="b">◆ご挨拶◆</span><br> greeting </h1>
-    <h2>はじめまして。<br>
-    JAZZ dancer のQooと申します。<br>
-    このページをご覧いただきありがとうございます。<br>
-    私がJAZZダンスに出会ったのは20代。・・・</h2>
-
-    <a href="about.html" class="more">
-      <img src="images/more.png" alt="Aboutページへ">
-    </a>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="contact">
-  <div class="center">
-    <h1><span class="b">◆お問合せ◆</span><br> Contact </h1>
-    <h2>振付・レッスンのご依頼・ご相談はこちら</h2>
-
-    <h3>DMからお気軽にお問い合わせください▼</h3>
-    <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
-      <img src="images/insta-banner.png" alt="Instagramへ">
-    </a>
-
-    <h3>LINE公式アカウントはこちら▼</h3>
-    <a href="preparing.html">
-      <img src="images/LINE-banner.png" alt="LINEへ">
-    </a>
-
-    <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
-  </div>
-</section>
 
 <!-- Footer -->
 <footer class="footer">
