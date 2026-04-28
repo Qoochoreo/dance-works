@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ------------------------------
+   基本設定
+------------------------------ */
+body {
+  background-color: #e9e1f2;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #6b5e55;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #6b5e55;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.center {
+  text-align: center;
+}
+
+.b {
+  font-weight: bold;
+}
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #6b5e55;
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 5px 8px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホヘッダー */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+}
+
+
+/* ------------------------------
+   セクション
+------------------------------ */
+
+.center a {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+  .contact a img {
+  margin: 20px auto;
+  display: block;
+}
+
+ .contact a {
+  display: block;
+  text-align: center;
+}
+ 
+
+/* Instagram & Contact バナー画像 */
+.insta img,
+.contact img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* 背景画像（スマホ対応） */
+.insta,
+.contact {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+
+.insta {
+  background-image: url("images/back01.png");
+}
+
+.contact {
+  background-image: url("images/back03.png");
+}
+
+/* ------------------------------
+   スマホ文字サイズ
+------------------------------ */
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 16px; }
+  h3 { font-size: 14px; }
+  p  { font-size: 14px; line-height: 1.7; }
+}
+
+
+/* ------------------------------
+   フッター
+------------------------------ */
+.footer {
+  background-color: #e9e1f2;
+  padding: 40px 0;
+  text-align: center;
+  color: #6b5a6e;
+  font-size: 14px;
+}
+
+.footer .logo {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="logo" style="width:150px;">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Contact -->
+<section class="contact">
+  <div class="center">
+    <h1><span class="b">◆お問合せ◆</span><br> Contact </h1>
+    <h2>振付・レッスンのご依頼・ご相談はこちら</h2>
+
+    <h3>DMからお気軽にお問い合わせください▼</h3>
+    <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
+      <img src="images/insta-banner.png" alt="Instagramへ">
+    </a>
+
+    <h3>LINE公式アカウントはこちら▼</h3>
+    <a href="preparing.html">
+      <img src="images/LINE-banner.png" alt="LINEへ">
+    </a>
+
+    <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="center">
+    <p class="logo">Qoo choreo</p>
+    <p class="copy">© 2026 QOO All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
