@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* ------------------------------
+   基本設定
+------------------------------ */
+body {
+  background-color: #e9e1f2;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #6b5e55;
+  margin: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #6b5e55;
+  font-weight: normal;
+  line-height: 1.8;
+}
+
+.center {
+  text-align: center;
+}
+
+.b {
+  font-weight: bold;
+}
+
+/* ------------------------------
+   ヘッダー
+------------------------------ */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+nav a {
+  color: #6b5e55;
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 5px 8px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* スマホヘッダー */
+@media (max-width: 600px) {
+  header {
+    padding: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+  nav ul {
+    gap: 12px;
+  }
+}
+
+/* ------------------------------
+   MOREバナー（PC用）
+------------------------------ */
+.more img {
+  width: 260px;
+  max-width: 260px;
+  margin: 30px auto;
+  display: block;
+}
+
+/* スマホ MOREバナー */
+@media (max-width: 600px) {
+  .more img {
+    width: 60% !important;
+    max-width: 300px !important;
+    margin: 20px auto !important;
+  }
+}
+
+/* ------------------------------
+   セクション
+------------------------------ */
+.Concept,
+.greeting {
+  margin: 80px 0;
+}
+
+.center a {
+  display: inline-block;
+  margin-top: 30px;
+}
+
+  .contact a img {
+  margin: 20px auto;
+  display: block;
+}
+
+ .contact a {
+  display: block;
+  text-align: center;
+}
+ 
+
+/* Instagram & Contact バナー画像 */
+.insta img,
+.contact img {
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* 背景画像（スマホ対応） */
+.insta,
+.contact {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+
+.insta {
+  background-image: url("images/back01.png");
+}
+
+.contact {
+  background-image: url("images/back03.png");
+}
+
+/* ------------------------------
+   スマホ文字サイズ
+------------------------------ */
+@media (max-width: 600px) {
+  h1 { font-size: 26px; }
+  h2 { font-size: 16px; }
+  h3 { font-size: 14px; }
+  p  { font-size: 14px; line-height: 1.7; }
+}
+
+/* ------------------------------
+   動画（MV）
+------------------------------ */
+.mv-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* PC動画 */
+@media (min-width: 768px) {
+  .mv-wrap {
+    height: 750px;
+  }
+  .mv-wrap video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* スマホ動画 */
+@media (max-width: 767px) {
+  .mv-wrap video {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #000;
+  }
+}
+
+/* ------------------------------
+   フッター
+------------------------------ */
+.footer {
+  background-color: #e9e1f2;
+  padding: 40px 0;
+  text-align: center;
+  color: #6b5a6e;
+  font-size: 14px;
+}
+
+.footer .logo {
+  font-size: 16px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html">
+    <img src="images/logo.png" alt="logo" style="width:150px;">
+  </a>
+
+  <nav>
+    <ul>
+      <li><a href="concept.html">Concept</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- MV -->
+<div class="mv-wrap">
+  <video autoplay muted loop playsinline>
+    <source src="images/mainvisual.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- Concept -->
+<section class="Concept">
+  <div class="center">
+    <h1><span class="b">◆コンセプト◆</span><br>Concept</h1>
+    <h2><span class="b">大人から始めるダンスを、もっと身近に。</span></h2>
+    <h2><span class="b">感情を解き放ち、音に浸り、自由に表現するJAZZダンス。</span><br>
+    JAZZダンスは「ジャズミュージックで踊るダンス？」とよく聞かれますが・・・</h2>
+
+    <a href="concept.html" class="more">
+      <img src="images/more.png" alt="コンセプト">
+    </a>
+  </div>
+</section>
+
+<!-- Insta -->
+<section class="insta">
+  <div class="center">
+    <h1><span class="b">◆コレオ◆</span><br>choreo</h1>
+    <h2>3週間で1つの振り付けが完成するまでの過程を更新していきます。</h2>
+  </div>
+
+  <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
+    <img src="images/insta-banner.png" alt="Instagramへ">
+  </a>
+</section>
+
+<!-- Greeting -->
+<section class="greeting">
+  <div class="center">
+    <h1><span class="b">◆ご挨拶◆</span><br> greeting </h1>
+    <h2>はじめまして。<br>
+    JAZZ dancer のQooと申します。<br>
+    このページをご覧いただきありがとうございます。<br>
+    私がJAZZダンスに出会ったのは20代。・・・</h2>
+
+    <a href="about.html" class="more">
+      <img src="images/more.png" alt="Aboutページへ">
+    </a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+  <div class="center">
+    <h1><span class="b">◆お問合せ◆</span><br> Contact </h1>
+    <h2>振付・レッスンのご依頼・ご相談はこちら</h2>
+
+    <h3>DMからお気軽にお問い合わせください▼</h3>
+    <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
+      <img src="images/insta-banner.png" alt="Instagramへ">
+    </a>
+
+    <h3>LINE公式アカウントはこちら▼</h3>
+    <a href="preparing.html">
+      <img src="images/LINE-banner.png" alt="LINEへ">
+    </a>
+
+    <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="center">
+    <p class="logo">Qoo choreo</p>
+    <p class="copy">© 2026 QOO All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
