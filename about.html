@@ -175,11 +175,15 @@ nav ul {
 
 @media (max-width: 600px) {
   .profile-text {
-    width: 100vw; /* 画面幅いっぱい */
-    margin-left: calc(50% - 50vw); /* 中央からはみ出させる */
+    width: 100%;
     padding: 100px 20px;
+    background-image: url("star-top.jpg"), url("star-bottom.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top center, bottom center;
+    background-size: 100% 80px, 100% 80px;
   }
 }
+
 
 
 .btn {
