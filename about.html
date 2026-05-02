@@ -144,15 +144,22 @@ nav ul {
     display: block;
   }
 
-  /* 星空でサンドイッチする文章 */
-  .profile-text {
-    width: 100%;
-    padding: 100px 20px 50px;
-    background-image: url("images/star-strong.png"), url("images/star-soft.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: top center, bottom center;
-    background-size: 100% 80px, 100% 80px;
-  }
+ /* 星空でサンドイッチする文章（背景だけ薄く） */
+.profile-text {
+  width: 100%;
+  padding: 100px 20px 50px;
+
+  /* ★背景だけ薄くするレイヤー（ここがポイント） */
+  background-image:
+    linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)),
+    url("images/star-strong.png"),
+    url("images/star-soft.png");
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: top center, bottom center, center;
+  background-size: 100% 80px, 100% 80px, cover;
+}
+
 
   /* 活動歴はPCと同じ背景でOK */
   .career-bg {
