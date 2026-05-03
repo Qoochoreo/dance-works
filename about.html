@@ -77,13 +77,11 @@ nav ul {
 }
 
 
-
 /* ------------------------------
-   セクション
+   PCレイアウト（横並び）
 ------------------------------ */
-/* PCデフォルト（横並び） */
 .profile-bg {
-  background-image: url("images/back02.png"); /* PC用背景 */
+  background-image: url("images/back02.png");
   background-size: cover;
   background-position: center;
   padding: 80px 0;
@@ -104,11 +102,13 @@ nav ul {
 .profile-photo img {
   width: 300px;
   border-radius: 12px;
-  margin-left: 50px; /* 右寄りに見せるための余白 */
+  margin-left: 50px;
 }
 
 
-/* 活動歴の背景 */
+/* ------------------------------
+   活動歴
+------------------------------ */
 .career-bg {
   background-image: url("images/BACK04.png");
   background-size: cover;
@@ -123,6 +123,32 @@ nav ul {
   list-style: none;
   padding: 0;
 }
+
+
+/* ------------------------------
+   Concept と同じ星サンド（スマホ専用）
+------------------------------ */
+.concept-visual {
+  width: 100%;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+.top-visual {
+  background-image: url("images/star-strong.png");
+  opacity: 0.45;
+}
+
+.bottom-visual {
+  background-image: url("images/star-soft.png");
+  opacity: 0.25;
+}
+
+
+/* ------------------------------
+   スマホレイアウト
+------------------------------ */
 @media (max-width: 600px) {
 
   /* PCの横並びを解除して縦並びに */
@@ -131,10 +157,10 @@ nav ul {
     text-align: center;
   }
 
-  /* スマホは背景画像を外す or 薄くする */
+  /* PC背景を消す */
   .profile-bg {
     background-image: none;
-    padding: 40px 0;
+    padding: 0;
   }
 
   /* 写真を先頭に */
@@ -144,67 +170,40 @@ nav ul {
     display: block;
   }
 
-  /* 星空でサンドイッチする文章（背景だけ薄く） */
+  /* 文章は幅100%＋左右5px余白 */
   .profile-text {
     width: 100%;
-    padding: 100px 5px 50px;
-
-    background-image:
-      linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
-      url("images/star-strong.png"),
-      url("images/star-soft.png");
-
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: top center, bottom center, center;
-    background-size: 110% 80px, 110% 80px, cover;
+    padding: 0 5px;
   }
 
-  /* 活動歴はPCと同じ背景でOK */
+  /* 活動歴の余白調整 */
   .career-bg {
     padding: 20px 0;
   }
 }
 
-@media (max-width: 600px) {
-  .profile-inner {
-    display: flex;
-    flex-direction: column; /* 縦並びに */
-  }
 
-  .profile-photo {
-    order: 1; /* 写真を先頭に */
-  }
-
-  .profile-text {
-    order: 2; /* 文章を後ろに */
-  }
-}
-
-
-
+/* ------------------------------
+   ボタン
+------------------------------ */
 .btn {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
   padding: 14px 28px;
-  background-color: #d7c7e8; /* もっと淡いラベンダー */
-  color: #6b5e55; /* 柔らかいブラウン文字 */
+  background-color: #d7c7e8;
+  color: #6b5e55;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* ふわっと影 */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-  .btn {
-  display: block;
-  width: fit-content;
-  margin: 40px auto;
-}
 
-  .indent {
-  margin-top: 20px; /* ← 好きな余白に調整できる */
-  font-weight: bold; /* 年号を少し強調したいなら */
-}
-
+/* ------------------------------
+   改行
+------------------------------ */
 .sp-br {
   display: none;
 }
@@ -215,19 +214,15 @@ nav ul {
   }
 }
 
-  body {
+
+/* ------------------------------
+   色統一
+------------------------------ */
+body, h1, h2, h3, p, li {
   color: #6b5e55;
 }
 
-h1, h2, h3 {
-  color: #6b5e55;
-}
 
-p, li {
-  color: #6b5e55;
-}
-
-  
 /* ------------------------------
    スマホ文字サイズ
 ------------------------------ */
@@ -237,6 +232,7 @@ p, li {
   h3 { font-size: 14px; }
   p  { font-size: 14px; line-height: 1.7; }
 }
+
 
 /* ------------------------------
    フッター
@@ -272,42 +268,56 @@ p, li {
     </ul>
   </nav>
 </header>
-  
+
+
+<!-- ⭐ スマホだけ Concept と同じ星サンド -->
+<div class="concept-visual top-visual"></div>
+
+
 <!-- profile -->
 <section class="profile-section pc-layout">
   <div class="profile-bg">
     <div class="profile-inner">
+
       <div class="profile-text">
         <h2>◆ プロフィール（Profile）</h2>
         <p>ダンサーネーム：Qoo</p>
- <p>ジャンル： JAZZ</p>
- <p>子どもの頃は音楽教室の<span class="sp-br"></span>ミュージカルクラスに通い、<br>
-学生時代は服飾科でデザインを学び、<br>
-   ファッションショーのステージに立つなど、<br>
-振り返れば“表現すること”が<span class="sp-br"></span>ずっと好きでした。<br>
-大人になってからも<span class="sp-br"></span>ダンスへの憧れは消えず、<br>
-仕事に追われる日々の中で<span class="sp-br"></span>「楽しめる趣味がほしい」と思い、<br>
-さまざまなジャンルの体験レッスンに参加。<br>
-その中で、感情表現を大切にする<span class="sp-br"></span>JAZZダンスに強く惹かれ、<br>
-本格的に学び始めました。<br>
-しなやかさと力強さ、<span class="sp-br"></span>自由な表現が共存するJAZZダンス。<br>
-その魅力を、自分らしく、<br>
-そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
+        <p>ジャンル： JAZZ</p>
+
+        <p>子どもの頃は音楽教室の<span class="sp-br"></span>ミュージカルクラスに通い、<br>
+        学生時代は服飾科でデザインを学び、<br>
+        ファッションショーのステージに立つなど、<br>
+        振り返れば“表現すること”が<span class="sp-br"></span>ずっと好きでした。<br>
+        大人になってからも<span class="sp-br"></span>ダンスへの憧れは消えず、<br>
+        仕事に追われる日々の中で<span class="sp-br"></span>「楽しめる趣味がほしい」と思い、<br>
+        さまざまなジャンルの体験レッスンに参加。<br>
+        その中で、感情表現を大切にする<span class="sp-br"></span>JAZZダンスに強く惹かれ、<br>
+        本格的に学び始めました。<br>
+        しなやかさと力強さ、<span class="sp-br"></span>自由な表現が共存するJAZZダンス。<br>
+        その魅力を、自分らしく、<br>
+        そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
       </div>
-     
+
       <div class="profile-photo">
         <img src="images/prof.JPG" alt="プロフィール写真">
       </div>
+
     </div>
   </div>
 
-  <div class="career-bg">
-     <div class="center">
-    <h3>活動歴</h3>
-    <ul>
-      <li>2019年よりJAZZダンスを中心に<span class="sp-br"></span>舞台出演やWS参加を重ね、<span class="sp-br"></span>表現力と基礎を磨く。</li>
 
- <li class="indent">2019年</li>
+  <!-- ⭐ スマホだけ Concept と同じ星サンド（下） -->
+  <div class="concept-visual bottom-visual"></div>
+
+
+  <div class="career-bg">
+    <div class="center">
+      <h3>活動歴</h3>
+      <ul>
+        <li>2019年よりJAZZダンスを中心に<span class="sp-br"></span>舞台出演やWS参加を重ね、<span class="sp-br"></span>表現力と基礎を磨く。</li>
+
+        <li class="indent">2019年</li>
+        <li class="indent">2019年</li>
  <li>・岐阜美少女図鑑 みりおん2 メンバー</li>
 <li class="indent">2020年</li>
  <li>・発表会showgo先生number出演</li>
@@ -330,11 +340,13 @@ p, li {
  <li>・たかりん先生ws参加</li>
  <li class="indent">2026年</li>
  <li>・たかりん先生ws参加</li>
-    </ul>
+      </ul>
+    </div>
   </div>
 </section>
 
-  <a href="index.html" class="btn">TOPへ戻る</a>
+
+<a href="index.html" class="btn">TOPへ戻る</a>
 
 
 <!-- Footer -->
