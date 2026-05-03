@@ -133,7 +133,7 @@ nav ul {
 
   /* スマホは背景画像を外す or 薄くする */
   .profile-bg {
-    background-image: none; /* 必要なら薄い星空に変更してもOK */
+    background-image: none;
     padding: 40px 0;
   }
 
@@ -144,28 +144,27 @@ nav ul {
     display: block;
   }
 
- /* 星空でサンドイッチする文章（背景だけ薄く） */
-.profile-text {
-  width: 100%;
-  padding: 100px 5px 50px;
+  /* 星空でサンドイッチする文章（背景だけ薄く） */
+  .profile-text {
+    width: 100%;
+    padding: 100px 5px 50px;
 
-  /* ★背景だけ薄くするレイヤー（ここがポイント） */
-  background-image:
-    linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
-    url("images/star-strong.png"),
-    url("images/star-soft.png");
+    background-image:
+      linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.30)),
+      url("images/star-strong.png"),
+      url("images/star-soft.png");
 
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: top center, bottom center, center;
-  background-size: 120% 80px, 120% 80px, cover;
-}
-
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: top center, bottom center, center;
+    background-size: 120% 80px, 120% 80px, cover;
+  }
 
   /* 活動歴はPCと同じ背景でOK */
   .career-bg {
     padding: 20px 0;
   }
 }
+
 @media (max-width: 600px) {
   .profile-inner {
     display: flex;
@@ -178,17 +177,6 @@ nav ul {
 
   .profile-text {
     order: 2; /* 文章を後ろに */
-  }
-}
-
-@media (max-width: 600px) {
-  .profile-text {
-    width: 100%;
-    padding: 100px 5px;
-    background-image: url("images/star-strong.png"), url("images/star-soft.png");
-    background-repeat: no-repeat, no-repeat;
-    background-position: top center, bottom center;
-    background-size: 120% 80px, 120% 80px;
   }
 }
 
