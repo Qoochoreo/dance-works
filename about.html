@@ -107,7 +107,7 @@ nav ul {
 
 
 /* ------------------------------
-   活動歴
+   活動歴（PC・スマホ共通）
 ------------------------------ */
 .career-bg {
   background-image: url("images/BACK04.png");
@@ -154,66 +154,37 @@ nav ul {
 
 
 /* ------------------------------
-   スマホレイアウト
+   スマホレイアウト（写真 → 星上 → 文 → 星下）
 ------------------------------ */
+.sp-profile-block {
+  display: none;
+}
+
 @media (max-width: 600px) {
 
-  /* PC背景を消す */
-  .profile-bg {
-    background-image: none;
-    padding: 0;
+  /* PCブロックを消す */
+  .pc-layout {
+    display: none;
   }
 
-  /* 横並び解除 */
-  .profile-inner {
+  /* スマホ専用ブロックを表示 */
+  .sp-profile-block {
     display: block;
     text-align: center;
+    padding: 0 5px;
   }
 
-  /* 写真を必ず先頭に */
-  .profile-photo img {
+  .sp-profile-block .profile-photo img {
     width: 70%;
     margin: 0 auto 20px;
     display: block;
   }
 
-  /* 文章は幅100%＋左右5px余白 */
-  .profile-text {
-    width: 100%;
-    padding: 0 5px;
-  }
-
-  /* 活動歴の余白調整 */
-  .career-bg {
-    padding: 20px 0;
+  .sp-text {
+    padding: 20px 5px;
   }
 }
 
-@media (max-width: 600px) {
-
-  /* 並び順をスマホだけ変更 */
-  .profile-photo {
-    order: 1;
-  }
-
-  .top-visual {
-    order: 2;
-  }
-
-  .profile-text {
-    order: 3;
-  }
-
-  .bottom-visual {
-    order: 4;
-  }
-
-  /* 並び替えが効くように親をflex化 */
-  .profile-section {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 /* ------------------------------
    ボタン
@@ -302,54 +273,79 @@ body, h1, h2, h3, p, li {
 </header>
 
 
-<!-- ⭐ スマホだけ Concept と同じ星サンド（上） -->
-<div class="concept-visual top-visual"></div>
+<!-- ⭐ スマホ専用：写真 → 星上 → 文章 → 星下 -->
+<div class="sp-profile-block">
+
+  <div class="profile-photo">
+    <img src="images/prof.JPG" alt="プロフィール写真">
+  </div>
+
+  <div class="concept-visual top-visual"></div>
+
+  <div class="profile-text sp-text">
+    <h2>◆ プロフィール（Profile）</h2>
+    <p>ダンサーネーム：Qoo</p>
+    <p>ジャンル： JAZZ</p>
+
+    <p>子どもの頃は音楽教室の<span class="sp-br"></span>ミュージカルクラスに通い、<br>
+    学生時代は服飾科でデザインを学び、<br>
+    ファッションショーのステージに立つなど、<br>
+    振り返れば“表現すること”が<span class="sp-br"></span>ずっと好きでした。<br>
+    大人になってからも<span class="sp-br"></span>ダンスへの憧れは消えず、<br>
+    仕事に追われる日々の中で<span class="sp-br"></span>「楽しめる趣味がほしい」と思い、<br>
+    さまざまなジャンルの体験レッスンに参加。<br>
+    その中で、感情表現を大切にする<span class="sp-br"></span>JAZZダンスに強く惹かれ、<br>
+    本格的に学び始めました。<br>
+    しなやかさと力強さ、<span class="sp-br"></span>自由な表現が共存するJAZZダンス。<br>
+    その魅力を、自分らしく、<br>
+    そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
+  </div>
+
+  <div class="concept-visual bottom-visual"></div>
+</div>
 
 
-<!-- profile -->
+<!-- ⭐ PC専用：横並びプロフィール -->
 <section class="profile-section pc-layout">
   <div class="profile-bg">
     <div class="profile-inner">
 
-      <div class="profile-photo">
-        <img src="images/prof.JPG" alt="プロフィール写真">
-      </div>
-
-      <div class="profile-text">
+      <div class="profile-text pc-text">
         <h2>◆ プロフィール（Profile）</h2>
         <p>ダンサーネーム：Qoo</p>
         <p>ジャンル： JAZZ</p>
-
         <p>子どもの頃は音楽教室の<span class="sp-br"></span>ミュージカルクラスに通い、<br>
-        学生時代は服飾科でデザインを学び、<br>
-        ファッションショーのステージに立つなど、<br>
-        振り返れば“表現すること”が<span class="sp-br"></span>ずっと好きでした。<br>
-        大人になってからも<span class="sp-br"></span>ダンスへの憧れは消えず、<br>
-        仕事に追われる日々の中で<span class="sp-br"></span>「楽しめる趣味がほしい」と思い、<br>
-        さまざまなジャンルの体験レッスンに参加。<br>
-        その中で、感情表現を大切にする<span class="sp-br"></span>JAZZダンスに強く惹かれ、<br>
-        本格的に学び始めました。<br>
-        しなやかさと力強さ、<span class="sp-br"></span>自由な表現が共存するJAZZダンス。<br>
-        その魅力を、自分らしく、<br>
-        そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
+    学生時代は服飾科でデザインを学び、<br>
+    ファッションショーのステージに立つなど、<br>
+    振り返れば“表現すること”が<span class="sp-br"></span>ずっと好きでした。<br>
+    大人になってからも<span class="sp-br"></span>ダンスへの憧れは消えず、<br>
+    仕事に追われる日々の中で<span class="sp-br"></span>「楽しめる趣味がほしい」と思い、<br>
+    さまざまなジャンルの体験レッスンに参加。<br>
+    その中で、感情表現を大切にする<span class="sp-br"></span>JAZZダンスに強く惹かれ、<br>
+    本格的に学び始めました。<br>
+    しなやかさと力強さ、<span class="sp-br"></span>自由な表現が共存するJAZZダンス。<br>
+    その魅力を、自分らしく、<br>
+    そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
+      </div>
+
+      <div class="profile-photo pc-photo">
+        <img src="images/prof.JPG" alt="プロフィール写真">
       </div>
 
     </div>
   </div>
+</section>
 
 
-<!-- ⭐ スマホだけ Concept と同じ星サンド（下） -->
-<div class="concept-visual bottom-visual"></div>
+<!-- ⭐ PC/スマホ共通：活動歴 -->
+<div class="career-bg">
+  <div class="center">
+    <h3>活動歴</h3>
+    <ul>
+      <li>2019年よりJAZZダンスを中心に<span class="sp-br"></span>舞台出演やWS参加を重ね、<span class="sp-br"></span>表現力と基礎を磨く。</li>
 
-
-  <div class="career-bg">
-    <div class="center">
-      <h3>活動歴</h3>
-      <ul>
-        <li>2019年よりJAZZダンスを中心に<span class="sp-br"></span>舞台出演やWS参加を重ね、<span class="sp-br"></span>表現力と基礎を磨く。</li>
-
-        <li class="indent">2019年</li>
- <li>・岐阜美少女図鑑 みりおん2 メンバー</li>
+      <li class="indent">2019年</li>
+      <li>・岐阜美少女図鑑 みりおん2 メンバー</li>
 <li class="indent">2020年</li>
  <li>・発表会showgo先生number出演</li>
 <li class="indent">2021年</li>
@@ -371,10 +367,9 @@ body, h1, h2, h3, p, li {
  <li>・たかりん先生ws参加</li>
  <li class="indent">2026年</li>
  <li>・たかりん先生ws参加</li>
-      </ul>
-    </div>
+    </ul>
   </div>
-</section>
+</div>
 
 
 <a href="index.html" class="btn">TOPへ戻る</a>
