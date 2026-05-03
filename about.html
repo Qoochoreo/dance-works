@@ -189,6 +189,31 @@ nav ul {
   }
 }
 
+@media (max-width: 600px) {
+
+  /* 並び順をスマホだけ変更 */
+  .profile-photo {
+    order: 1;
+  }
+
+  .top-visual {
+    order: 2;
+  }
+
+  .profile-text {
+    order: 3;
+  }
+
+  .bottom-visual {
+    order: 4;
+  }
+
+  /* 並び替えが効くように親をflex化 */
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
 /* ------------------------------
    ボタン
