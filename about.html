@@ -129,20 +129,27 @@ nav ul {
    Concept と同じ星サンド（スマホ専用）
 ------------------------------ */
 .concept-visual {
-  width: 100%;
-  height: 100px;
-  background-size: cover;
-  background-position: center;
+  display: none; /* PCでは非表示 */
 }
 
-.top-visual {
-  background-image: url("images/star-strong.png");
-  opacity: 0.45;
-}
+@media (max-width: 600px) {
+  .concept-visual {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+  }
 
-.bottom-visual {
-  background-image: url("images/star-soft.png");
-  opacity: 0.25;
+  .top-visual {
+    background-image: url("images/star-strong.png");
+    opacity: 0.45;
+  }
+
+  .bottom-visual {
+    background-image: url("images/star-soft.png");
+    opacity: 0.25;
+  }
 }
 
 
@@ -151,19 +158,19 @@ nav ul {
 ------------------------------ */
 @media (max-width: 600px) {
 
-  /* PCの横並びを解除して縦並びに */
-  .profile-inner {
-    display: block;
-    text-align: center;
-  }
-
   /* PC背景を消す */
   .profile-bg {
     background-image: none;
     padding: 0;
   }
 
-  /* 写真を先頭に */
+  /* 横並び解除 */
+  .profile-inner {
+    display: block;
+    text-align: center;
+  }
+
+  /* 写真を必ず先頭に */
   .profile-photo img {
     width: 70%;
     margin: 0 auto 20px;
@@ -270,7 +277,7 @@ body, h1, h2, h3, p, li {
 </header>
 
 
-<!-- ⭐ スマホだけ Concept と同じ星サンド -->
+<!-- ⭐ スマホだけ Concept と同じ星サンド（上） -->
 <div class="concept-visual top-visual"></div>
 
 
@@ -278,6 +285,10 @@ body, h1, h2, h3, p, li {
 <section class="profile-section pc-layout">
   <div class="profile-bg">
     <div class="profile-inner">
+
+      <div class="profile-photo">
+        <img src="images/prof.JPG" alt="プロフィール写真">
+      </div>
 
       <div class="profile-text">
         <h2>◆ プロフィール（Profile）</h2>
@@ -298,16 +309,12 @@ body, h1, h2, h3, p, li {
         そして大人から始める方にも<span class="sp-br"></span>寄り添いながら伝えていきます。</p>
       </div>
 
-      <div class="profile-photo">
-        <img src="images/prof.JPG" alt="プロフィール写真">
-      </div>
-
     </div>
   </div>
 
 
-  <!-- ⭐ スマホだけ Concept と同じ星サンド（下） -->
-  <div class="concept-visual bottom-visual"></div>
+<!-- ⭐ スマホだけ Concept と同じ星サンド（下） -->
+<div class="concept-visual bottom-visual"></div>
 
 
   <div class="career-bg">
@@ -316,7 +323,6 @@ body, h1, h2, h3, p, li {
       <ul>
         <li>2019年よりJAZZダンスを中心に<span class="sp-br"></span>舞台出演やWS参加を重ね、<span class="sp-br"></span>表現力と基礎を磨く。</li>
 
-        <li class="indent">2019年</li>
         <li class="indent">2019年</li>
  <li>・岐阜美少女図鑑 みりおん2 メンバー</li>
 <li class="indent">2020年</li>
