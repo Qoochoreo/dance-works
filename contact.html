@@ -122,7 +122,23 @@ nav ul {
 .contact {
   background-image: url("images/back03.jpg");
 }
+/* バナー専用の安定レイアウト */
+.banner-wrap {
+  text-align: center;
+}
 
+.banner-wrap a {
+  display: inline-block;
+}
+
+.banner-wrap img {
+  width: 80%;
+  max-width: 500px;
+  display: block;
+  margin: 20px auto;
+}
+
+  
   .btn {
   display: inline-block;
   padding: 14px 28px;
@@ -188,19 +204,23 @@ nav ul {
     <h2>振付・レッスンのご依頼・ご相談はこちら</h2>
 
     <h3>DMからお気軽にお問い合わせください▼</h3>
-    <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
-      <img src="images/insta-banner.jpg" alt="Instagramへ">
-    </a>
+    <div class="banner-wrap">
+      <a href="https://www.instagram.com/qooo.choreo/" target="_blank">
+        <img src="images/insta-banner.jpg" alt="Instagramへ">
+      </a>
+    </div>
 
     <h3>LINE公式アカウントはこちら▼</h3>
-    <a href="preparing.html">
-      <img src="images/LINE-banner.png" alt="LINEへ">
-    </a>
+    <div class="banner-wrap">
+      <a href="preparing.html">
+        <img src="images/LINE-banner.png" alt="LINEへ">
+      </a>
+    </div>
 
     <a href="mailto:sample@example.com">メールでのお問い合わせはこちら</a>
-
   </div>
 </section>
+
   
   <div class="center">
 <a href="index.html" class="btn">TOPへ戻る</a>
