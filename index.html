@@ -123,14 +123,15 @@ nav ul {
 /* 親を中央寄せにする */
 .insta,
 .contact {
-  text-align: center;
+  text-align: center !important;
 }
 
 /* 画像リンクは inline-block のまま */
 .insta a,
 .contact a {
   display: inline-block;
-  margin: 20px 0; /* ← auto じゃなくてOK */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 画像のサイズ調整 */
