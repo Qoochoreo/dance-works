@@ -128,11 +128,9 @@ nav ul {
 /* ------------------------------
    Concept と同じ星サンド（スマホ専用）
 ------------------------------ */
-.concept-visual {
-  display: none; /* PCでは非表示 */
-}
-
 @media (max-width: 600px) {
+
+  /* Concept星サンド */
   .concept-visual {
     display: block;
     width: 100%;
@@ -144,30 +142,20 @@ nav ul {
   .top-visual {
     background-image: url("images/star-strong.png");
     opacity: 0.45;
+    margin-bottom: 40px; /* ← ここで余白を作れる */
   }
 
   .bottom-visual {
     background-image: url("images/star-soft.png");
     opacity: 0.25;
   }
-}
 
-
-/* ------------------------------
-   スマホレイアウト（写真 → 星上 → 文 → 星下）
------------------------------- */
-.sp-profile-block {
-  display: none;
-}
-
-@media (max-width: 600px) {
-
-  /* PCブロックを消す */
+  /* PCブロック非表示 */
   .pc-layout {
     display: none;
   }
 
-  /* スマホ専用ブロックを表示 */
+  /* スマホ専用ブロック */
   .sp-profile-block {
     display: block;
     text-align: center;
@@ -183,16 +171,15 @@ nav ul {
   .sp-text {
     padding: 20px 5px;
   }
-}
 
-@media (max-width: 600px) {
   .sp-profile-block .profile-text {
-    width: 100% !important;
+    width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    text-align: center; /* ← 中央揃え維持 */
+    text-align: center;
   }
 }
+
 
   
 /* ------------------------------
