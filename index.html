@@ -120,13 +120,20 @@ nav ul {
  
 
 /* Instagram & Contact バナー画像 */
-.insta img,
-.contact img {
+.insta a,
+.contact a {
+  display: inline-block; /* ← 画像だけがクリック範囲になる */
+  margin: 20px auto;
+}
+
+.insta a img,
+.contact a img {
   width: 80%;
   max-width: 500px;
-  margin: 20px auto;
   display: block;
+  margin: 0; /* ← 画像の左右余白を消す */
 }
+
 
 /* 背景画像（スマホ対応） */
 .insta,
